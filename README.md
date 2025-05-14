@@ -1,6 +1,23 @@
-# anylang-template
+# nixpkgs-maintained-by
 
-[![CI - Nix Status](https://github.com/kachick/anylang-template/actions/workflows/ci-nix.yml/badge.svg?branch=main)](https://github.com/kachick/anylang-template/actions/workflows/ci-nix.yml?query=branch%3Amain+)
+## Motivation
 
-A template that is not exclusive to one programming language.\
-Basic setup for editor, documents and GitHub Actions.
+I often need to automatically get a list of `pname`s for packages where I am listed as a maintainer in `nixpkgs`.
+
+This is because several tools use `pname` as a key, such as:
+
+- [https://github.com/nix-community/hydra-check](https://github.com/nix-community/hydra-check)
+- [https://github.com/kachick/nixpkgs-update-log-checker](https://github.com/kachick/nixpkgs-update-log-checker)
+
+While it’s possible to get similar data from [Repology](https://repology.org/), it has some downsides:
+
+- Some package names differ from `nixpkgs` `pname`s (e.g., `hugo` appears as `hugo-sitegen`).
+- It may take time to sync the list with nixpkgs.
+
+This CLI helps extract the actual `pname`s directly from the `nixpkgs` source.
+
+## Inspired
+
+When looking for a way to solve this, I found [this helpful snippet](https://discourse.nixos.org/t/how-to-get-a-list-of-packages-maintained-by-someone/29963/3).
+
+This repository wraps a similar idea in a CLI that can be easily run with `nix run`.
