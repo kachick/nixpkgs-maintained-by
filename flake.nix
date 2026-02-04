@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.xz";
   };
 
   outputs =
@@ -30,10 +30,14 @@
                 # https://github.com/NixOS/nix/issues/730#issuecomment-162323824
                 bashInteractive
                 findutils # xargs
-                nixfmt-rfc-style
+                nixfmt
+                nixfmt-tree
                 nixd
-                go-task
 
+                go
+                gopls
+
+                go-task
                 dprint
                 typos
               ]
