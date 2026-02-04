@@ -41,6 +41,7 @@
                 go-task
                 dprint
                 typos
+                zizmor
               ]
             );
           };
