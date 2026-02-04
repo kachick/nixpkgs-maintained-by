@@ -1,5 +1,7 @@
 # nixpkgs-maintained-by
 
+[![built with garnix](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fgarnix.io%2Fapi%2Fbadges%2Fkachick%2Fnixpkgs-maintained-by)](https://garnix.io/repo/kachick/nixpkgs-maintained-by)
+
 ## Usage
 
 ```bash
