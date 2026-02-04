@@ -1,5 +1,18 @@
 # nixpkgs-maintained-by
 
+## Usage
+
+```bash
+# Find from your system's nixpkgs
+go run main.go -id kachick -json
+
+# Find from your specified nixpkgs
+NIX_PATH=nixpkgs=/THE_PATH go run main.go -id kachick
+
+# Run via flake
+nix run github:kachick/nixpkgs-maintained-by -- -id kachick
+```
+
 ## Motivation
 
 I often need to automatically get a list of `pname`s for packages where I am listed as a maintainer in `nixpkgs`.
@@ -16,8 +29,6 @@ While it’s possible to get similar data from [Repology](https://repology.org/)
 
 This CLI helps extract the actual `pname`s directly from the `nixpkgs` source.
 
-## Inspired
+## Links
 
 When looking for a way to solve this, I found [this helpful snippet](https://discourse.nixos.org/t/how-to-get-a-list-of-packages-maintained-by-someone/29963/3).
-
-This repository wraps a similar idea in a CLI that can be easily run with `nix run`.
